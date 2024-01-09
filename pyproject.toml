@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "easygmail"
+version = "0.1.0"
+description = "A minimalistic Python API for sending emails via Gmail"
+authors = ["ayushgun <ayushgundawar@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
