@@ -8,12 +8,6 @@ Sure, I can help clean up and organize the README for better clarity and structu
 
 EasyGmail is a lightweight, minimalistic, and synchronous Python API designed for quick email sending via Gmail.
 
-## Features
-
-- Simple and minimalistic interface.
-- Synchronous email sending.
-- Supports Gmail authentication with app passwords for enhanced security.
-
 ## Getting Started
 
 ### Prerequisites
