@@ -18,7 +18,7 @@ from easygmail import Client, EmailBuilder
 client = Client(email_address="<address>@gmail.com", password="<app password>")
 
 msg = EmailBuilder(
-    receiver="recipient@domain.com", subject="<subject text>", body="<body text>"
+    receiver="<recipient>@domain.com", subject="<subject text>", body="<body text>"
 ).build()
 
 client.send(msg)
@@ -63,7 +63,7 @@ Create `EmailMessage` objects using one of the following methods:
 from easygmail import EmailBuilder
 
 msg = EmailBuilder(
-    receiver="recipient@domain.com", subject="<subject text>", body="<body text>"
+    receiver="<recipient>@domain.com", subject="<subject text>", body="<body text>"
 ).build()
 ```
 
@@ -74,7 +74,7 @@ from easygmail import EmailBuilder
 
 msg = (
     EmailBuilder()
-    .set_receiver("recipient@domain.com")
+    .set_receiver("<recipient>@domain.com")
     .set_subject("<subject text>")
     .set_body("<body text>")
 ).build()
@@ -86,7 +86,7 @@ msg = (
 from email.message import EmailMessage
 
 msg = EmailMessage()
-msg["To"] = "recipient@domain.com"
+msg["To"] = "<recipient>@domain.com"
 msg["Subject"] = "<subject text>"
 msg.set_content("<body text>")
 ```
