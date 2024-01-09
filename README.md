@@ -1,7 +1,3 @@
-Sure, I can help clean up and organize the README for better clarity and structure. Here's a revised version:
-
----
-
 # EasyGmail
 
 ## Overview
@@ -94,7 +90,3 @@ msg["To"] = "recipient@domain.com"
 msg["Subject"] = "<subject text>"
 msg.set_content("<body text>")
 ```
-
----
-
-This revised README is more structured, with clear headings and subheadings for better readability and navigation. It should provide users with a straightforward guide on how to get started and use EasyGmail effectively.
