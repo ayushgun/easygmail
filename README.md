@@ -6,6 +6,11 @@ EasyGmail is a lightweight, minimalistic, and synchronous Python API designed fo
 
 ## Getting Started
 
+### Installation
+```
+pip install git+https://github.com/ayushgun/easygmail
+```
+
 ### Prerequisites
 
 Before using EasyGmail, ensure you have an [app password](https://support.google.com/mail/answer/185833?hl=en#app-passwords) for Gmail. Do **not** use your regular account password.
