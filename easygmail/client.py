@@ -3,6 +3,7 @@ import smtplib
 from email.message import EmailMessage
 
 from dotenv import load_dotenv
+from .utility import validate_gmail, validate_password
 
 
 class Client:
@@ -22,20 +23,15 @@ class Client:
         if not email_address or not password:
             raise ValueError("Email address and password must be provided")
 
-        self.__validate_email(email_address)
-        self.__validate_password(password)
+        if not validate_gmail(email_address):
+            raise ValueError("Email must be a Gmail address (ends with @gmail.com)")
+
+        if not validate_password(password):
+            raise ValueError("Password must be at least 8 characters long")
 
         self.email_address = email_address
         self.password = password
         self.__init_server()
-
-    def __validate_email(self, email: str) -> None:
-        if not email.endswith("@gmail.com"):
-            raise ValueError("Email must be a Gmail address (ends with @gmail.com)")
-
-    def __validate_password(self, password: str) -> None:
-        if len(password) < 8:
-            raise ValueError("Password must be at least 8 characters long")
 
     def __init_server(self) -> None:
         self.server = smtplib.SMTP("smtp.gmail.com", 587)
