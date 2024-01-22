@@ -7,6 +7,7 @@ EasyGmail is a lightweight, minimalistic, and synchronous Python API designed fo
 ## Getting Started
 
 ### Installation
+
 ```
 pip install git+https://github.com/ayushgun/easygmail
 ```
@@ -72,7 +73,7 @@ msg = EmailBuilder(
 ).build()
 ```
 
-2. **EmailBuilder Fluent Interface**:
+2. **EmailBuilder Factory Interface**:
 
 ```python
 from easygmail import EmailBuilder
