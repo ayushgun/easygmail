@@ -1,4 +1,3 @@
-from copy import deepcopy
 from email.message import EmailMessage
 from typing import Self
 
@@ -27,17 +26,17 @@ class EmailBuilder:
         if not validate_email(receiver):
             raise ValueError("Receiver must be a valid email address")
 
-        new_email = deepcopy(self)
+        new_email = self
         new_email.message["To"] = receiver
         return new_email
 
     def set_subject(self, subject: str) -> Self:
-        new_email = deepcopy(self)
+        new_email = self
         new_email.message["Subject"] = subject
         return new_email
 
     def set_body(self, body: str) -> Self:
-        new_email = deepcopy(self)
+        new_email = self
         new_email.message.set_content(body)
         return new_email
 
