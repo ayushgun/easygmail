@@ -1,7 +1,7 @@
 from email.message import EmailMessage
 from typing import Self
 
-from .utility import validate_email
+from .validation import validate_email
 
 
 class EmailBuilder:
@@ -9,7 +9,7 @@ class EmailBuilder:
     A builder class for creating EmailMessage objects.
 
     This class provides a fluent interface to build an EmailMessage with a receiver,
-    subject, and body. It includes methods for setting each of these components
+    subject, and body. It includes member functions for setting each of these components
     and for validating the email address of the receiver.
 
     Attributes:

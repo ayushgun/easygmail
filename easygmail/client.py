@@ -3,7 +3,7 @@ import smtplib
 from email.message import EmailMessage
 
 from dotenv import load_dotenv
-from .utility import validate_gmail, validate_password
+from .validation import validate_gmail, validate_password
 
 
 class Client:
@@ -60,7 +60,7 @@ class Client:
         """
         Initializes the SMTP server for sending emails.
 
-        This method sets up the SMTP server with Gmail's settings and logs in
+        This member function sets up the SMTP server with Gmail's settings and logs in
         using the provided credentials. It is called during the initialization
         of the Client object.
         """
@@ -75,7 +75,7 @@ class Client:
         """
         Sends an email message.
 
-        This method sends an EmailMessage using the initialized SMTP server.
+        This member function sends an EmailMessage using the initialized SMTP server.
         If the 'From' field is not set in the email, it uses the client's email address.
 
         Args:
