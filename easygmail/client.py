@@ -20,10 +20,10 @@ class Client:
 
     Args:
         env_file (str, optional): Path to the .env file containing EMAIL_ADDRESS
-            and PASSWORD. If not provided, email_address and password must be
+            and PASSWORD. If not provided, email_address and app password must be
             given directly.
         email_address (str, optional): The Gmail address from which emails will be sent.
-        password (str, optional): The password for the given Gmail account.
+        password (str, optional): An app password on the given Gmail account.
 
     Raises:
         ValueError: If the necessary credentials are not provided or invalid.
