@@ -3,6 +3,7 @@ import smtplib
 from email.message import EmailMessage
 
 from dotenv import load_dotenv
+
 from .validation import validate_gmail, validate_password
 
 
@@ -30,7 +31,7 @@ class Client:
     """
 
     def __init__(
-        self, env_file: str = None, email_address: str = None, password: str = None
+        self, email_address: str = None, password: str = None, env_file: str = None
     ) -> None:
         if env_file:
             load_dotenv(env_file)

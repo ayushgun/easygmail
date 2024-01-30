@@ -21,7 +21,7 @@ Before using EasyGmail, ensure you have an [app password](https://support.google
 ```python
 from easygmail import Client, EmailBuilder
 
-client = Client(email_address="<address>@gmail.com", password="<app password>")
+client = Client("<address>@gmail.com", "<app password>")
 
 msg = EmailBuilder(
     receiver="<recipient>@domain.com", subject="<subject text>", body="<body text>"
@@ -40,7 +40,7 @@ You can instantiate a `Client` object in two ways:
 ```python
 from easygmail import Client
 
-client = Client(email_address="<address>@gmail.com", password="<app password>")
+client = Client("<address>@gmail.com", "<app password>")
 ```
 
 2. **Environment File**:
