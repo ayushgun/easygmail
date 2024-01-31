@@ -34,10 +34,8 @@ class EmailBuilder:
                 raise ValueError("Receiver must be a valid email address")
 
             self.message["To"] = receiver
-
         if subject:
             self.message["Subject"] = subject
-
         if body:
             self.message.set_content(body)
 
@@ -111,7 +109,7 @@ class EmailBuilder:
             raise ValueError("Email receiver is not set.")
         if not self.message["Subject"]:
             raise ValueError("Email subject is not set.")
-        if not self.message.get_content():
+        if not self.message.get_payload(decode=True):
             raise ValueError("Email body is not set.")
 
         return self.message
