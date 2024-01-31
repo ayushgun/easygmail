@@ -55,7 +55,8 @@ class Client:
         self.__init_server()
 
     def __del__(self) -> None:
-        self.server.quit()
+        if getattr(self, "server", None):
+            self.server.quit()
 
     def __init_server(self) -> None:
         """
