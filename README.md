@@ -96,3 +96,13 @@ msg["To"] = "<recipient>@domain.com"
 msg["Subject"] = "<subject text>"
 msg.set_content("<body text>")
 ```
+
+## Roadmap
+
+The current release is a beta release. By stable release 1.0, the following features are projected to be added:
+
+- [ ] Unit testing
+- [ ] Static Site Documentation
+- [ ] File Attachments
+- [ ] HTML Emails
+- [ ] Variadic Recipients
